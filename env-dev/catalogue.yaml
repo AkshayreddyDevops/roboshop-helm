@@ -1,0 +1,21 @@
+name: catalogue
+port: 8080
+env:
+  - name: mongo_url
+    value: "mongodb://mongo-ip:27017/catalogue"
+  - name: mongo
+    value: "true"
+
+schema:
+  enabled: "true"
+  container:
+    master-data: master-data.js
+  env:
+    - name: DB_TYPE
+      value: mongo
+    - name: APP_GET_URL
+      value: "https://github.com/roboshop-devops-project-v3/catalogue"
+    - name: DB_HOST
+      value: <mongo_dbs_record>
+    - name: SCHEMA_FILE
+      value: db/master-data.js  

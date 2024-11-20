@@ -1,0 +1,12 @@
+name: user
+port: 8080
+env:
+  - name: catalogue_host
+  - name: mongo_url
+    value: "mongodb://mongo-ip:27017/catalogue"
+  - name: mongo
+    value: "true"
+  - name:   REDIS_URL
+    value: "redis://redis-ip:6379"
+schema:
+  enabled: false

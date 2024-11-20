@@ -1,0 +1,20 @@
+{{- if eq .Values.schema.enabled -}}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    appName: {{ .Values.name }}
+spec:
+  template:
+    spec:
+      containers:
+        {{- range $k, $v := .Values.schema.container -}}
+          - name: {{ $k }}
+            image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-lode
+            env:
+             {{- toYaml $.Values.schema.env | indent 10 -}}
+        {{ end }}
+      restartPolicy: Never
+    backoffLimit: 4
+{{- end -}}

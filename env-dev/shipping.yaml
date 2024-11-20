@@ -1,0 +1,21 @@
+name: shipping
+port: 8080
+
+schema:
+  enabled: true
+  container: 
+    master-data: master-data.sql
+    schema: schema.sql
+    app-user: app-user.sql
+  env:
+    - name: DB_HOST
+      value: mysql-ip
+    - name: DB_USER
+      value: "root"
+    - name: DB_PASS
+      value: "RoboShop@1"
+    - name: APP_GET_URL
+      value: "https://github.com/roboshop-devops-project-v3/shipping"
+    - name: DB_TYPE
+      value: mysql
+  

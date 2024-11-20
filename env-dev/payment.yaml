@@ -1,0 +1,16 @@
+name: payment
+env:
+  - name: CART_HOST
+    value: <CART_host>
+  - name: CART_PORT
+    value: <CART_port>
+  - name:   USER_HOST
+    value: "<USER_HOST>"
+  - name:   USER_PORT
+    value: "<USER_PORT>"
+  - name:   AMQP_HOST
+    value: "<AMQP_HOST>"
+  - name:   AMQP_PORT
+    value: "<AMQP_PORT>"
+  - name:   AMQP_PASS
+    value: "Roboshop123"

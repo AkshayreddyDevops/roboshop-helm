@@ -1,0 +1,8 @@
+name: cart
+env:
+  - name: catalogue_host
+    value: <catalogue_host>
+  - name: CATALOGUE_PORT
+    value: <catalogue_port>
+  - name:   REDIS_HOST
+    value: "<REDIS_HOST>"
